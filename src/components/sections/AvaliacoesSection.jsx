@@ -20,56 +20,64 @@ export default function AvaliacoesSection() {
       texto:
         "Profissional sensível e competente. O atendimento transmite confiança e acolhimento.",
     },
+    {
+      nome: "Paciente",
+      estrelas: 5,
+      texto:
+        "Ambiente acolhedor e atendimento de excelência. Recomendo para todos que buscam profissionalism e humanidade.",
+    },
   ];
 
   return (
     <section id="avaliacoes" className="avaliacoes-section">
-      <div className="avaliacoes-container">
-        <div className="avaliacoes-header">
-          <span className="avaliacoes-tag">Google</span>
-          <h2>Avaliações</h2>
-          <p>
-            Sua opinião é muito importante. Veja alguns depoimentos e, se quiser,
-            deixe sua avaliação no Google.
-          </p>
-        </div>
+      <div className="container">
+        <div className="avaliacoes-container">
+          <div className="avaliacoes-header">
+            <span className="avaliacoes-tag">Depoimentos</span>
+            <h2>O que dizem sobre meu atendimento</h2>
+            <p>
+              Muito grato pelos depoimentos sinceros dos meus pacientes. Sua satisfação é meu maior reconhecimento. Você também pode deixar sua avaliação no Google.
+            </p>
+          </div>
 
-        <div className="avaliacoes-resumo">
-          <div className="nota">5,0</div>
-          <div className="estrelas">★★★★★</div>
-          <p>Atendimento avaliado com excelência</p>
-        </div>
+          <div className="avaliacoes-resumo">
+            <div className="nota">5,0</div>
+            <div className="estrelas">★★★★★</div>
+            <p>Atendimento avaliado com excelência</p>
+          </div>
 
-        <div className="avaliacoes-grid">
-          {avaliacoes.map((item, index) => (
-            <article key={index} className="avaliacao-card">
-              <div className="avaliacao-topo">
-                <strong>{item.nome}</strong>
-                <span>{"★".repeat(item.estrelas)}</span>
-              </div>
-              <p>{item.texto}</p>
-            </article>
-          ))}
-        </div>
+          <div className="avaliacoes-grid">
+            {avaliacoes.map((item, index) => (
+              <article key={index} className="avaliacao-card">
+                <div className="avaliacao-topo">
+                  <strong>{item.nome}</strong>
+                  <span>{"★".repeat(item.estrelas)}</span>
+                </div>
+                <p>{item.texto}</p>
+              </article>
+            ))}
+          </div>
 
-        <div className="avaliacoes-acoes">
-          <a
-            href={googleReviewLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="botao botao-primario"
-          >
-            Avaliar no Google
-          </a>
+          <div className="avaliacoes-acoes">
+            <a
+              href={googleReviewLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="botao botao-primario"
+            >
+              {/* Deixar sua avaliação */}
+              ⭐ Deixar sua avaliação
+            </a>
 
-          <a
-            href={googleReviewLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="botao botao-secundario"
-          >
-            Ver avaliações
-          </a>
+            <a
+              href={googleReviewLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="botao botao-secundario"
+            >
+              Ver mais avaliações
+            </a>
+          </div>
         </div>
       </div>
     </section>

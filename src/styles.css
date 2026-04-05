@@ -1,0 +1,810 @@
+/* ═══════════════════════════════════════════════════════════
+   VARIÁVEIS GLOBAIS - Cores, espaçamento, fontes
+   ═══════════════════════════════════════════════════════════ */
+:root {
+  --bg: #f2efe3;
+  --bg-soft: #ebe6d9;
+  --white: #ffffff;
+  --text: #3e0100;
+  --text-soft: #6f5648;
+  --primary: #3e0100;
+  --primary-2: #54100e;
+  --accent: #7c302a;
+  --accent-soft: #af8b7a;
+  --line: #d0cec1;
+  --shadow: 0 20px 70px rgba(62, 1, 0, 0.07);
+  --shadow-soft: 0 10px 35px rgba(62, 1, 0, 0.05);
+  --radius-xl: 2rem;
+  --radius-lg: 1.5rem;
+  --container: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Scroll suave ao clicar em links âncora */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Mulish', sans-serif;
+  /* 🎨 Background com logo grande como watermark em baixa opacidade */
+  background-image: url('/logo.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50% auto;
+  background-color: var(--bg);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   CONTAINER - Largura máxima do conteúdo com padding automático
+   ═══════════════════════════════════════════════════════════ */
+.site {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  width: min(var(--container), calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   HEADER - Navegação no topo (fixed/sticky)
+   ═══════════════════════════════════════════════════════════ */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  border-bottom: 1px solid var(--line);
+  background: rgba(242, 239, 227, 0.88);
+  backdrop-filter: blur(16px);
+}
+
+/* Flex layout para logo + menu + botão */
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 84px;
+}
+
+/* Logo da marca */
+.brand-logo {
+  height: 56px;
+  width: auto;
+}
+
+/* Menu de navegação */
+.nav {
+  display: flex;
+  gap: 1.8rem;
+  font-size: 0.96rem;
+}
+
+.nav a {
+  transition: 0.25s ease;
+}
+
+/* Efeito hover no menu */
+.nav a:hover {
+  color: var(--accent);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   BOTÕES - Estilos primário e secundário
+   ═══════════════════════════════════════════════════════════ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 0 1.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: 0.25s ease;
+  border: 1px solid transparent;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Botão primário - Marrom escuro */
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--primary-2);
+}
+
+/* Botão secundário - Branco/transparente */
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.72);
+  border-color: rgba(124, 48, 42, 0.2);
+  color: var(--text);
+}
+
+.btn-secondary:hover {
+  background: #fff;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SEÇÃO HERO - Primeira seção com texto grande + foto
+   ═══════════════════════════════════════════════════════════ */
+.hero {
+  position: relative;
+  min-height: calc(100vh - 84px);
+  display: flex;
+  align-items: center;
+  isolation: isolate;
+}
+
+/* Grid 2 colunas - Texto esquerda, Foto direita */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 3rem;
+  align-items: start;
+  padding: 4.5rem 0;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+/* Elementos desfocados de fundo (efeito blurry) */
+.hero-blur {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(60px);
+  z-index: 0;
+}
+
+.blur-left {
+  left: -120px;
+  top: -10px;
+  width: 340px;
+  height: 340px;
+  background: rgba(208, 206, 193, 0.8);
+}
+
+.blur-right {
+  right: -100px;
+  top: 120px;
+  width: 300px;
+  height: 300px;
+  background: rgba(175, 139, 122, 0.25);
+}
+
+/* Padrão decorativo de pontos */
+.pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.05;
+  background-image: radial-gradient(var(--accent) 1px, transparent 1px);
+  background-size: 20px 20px;
+  z-index: 0;
+}
+
+.eyebrow,
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0.2rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(175, 139, 122, 0.45);
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--accent);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+}
+
+/* Tag para seção dark, com cores invertidas */
+.light-tag {
+  color: #f3ddd3;
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   TIPOGRAFIAS - H1, H2, H3, Parágrafos
+   ═══════════════════════════════════════════════════════════ */
+/* Títulos grandes - Playfair Display (elegante) */
+h1, h2, .step-number {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+h1 {
+  margin-top: 1.2rem;
+  font-size: clamp(2.8rem, 6vw, 5.2rem);
+  line-height: 1.04;
+  max-width: 14ch;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.12;
+  max-width: 18ch;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+p {
+  margin: 0;
+}
+
+/* Descrições e textos maiores */
+.hero-description,
+.text-stack,
+.card p,
+.contact-description,
+.dark-box p {
+  color: var(--text-soft);
+  line-height: 1.9;
+  font-size: 1.06rem;
+}
+
+.hero-description {
+  margin-top: 1.5rem;
+  max-width: 42rem;
+  font-size: 1.15rem;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   HERO ACTIONS - Botões CTA na seção hero
+   ═══════════════════════════════════════════════════════════ */
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   HIGHLIGHT GRID - 3 Destaques na seção hero
+   ═══════════════════════════════════════════════════════════ */
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2.4rem;
+  max-width: 52rem;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   HERO TEXT - Fundo para o texto na seção hero
+   ═══════════════════════════════════════════════════════════ */
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.15rem;
+  align-self: start;
+}
+
+.text-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 1.8rem;
+  box-shadow: var(--shadow-soft);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   CARDS - Containers de conteúdo (universal)
+   ═══════════════════════════════════════════════════════════ */
+.card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Mini cards - Destaques na seção hero */
+.mini-card {
+  padding: 1.2rem;
+}
+
+.mini-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.mini-card p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   FOTOS - Frame com moldura e Label
+   ═══════════════════════════════════════════════════════════ */
+.hero-visual {
+  position: relative;
+  align-self: start;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Frame da foto no hero */
+.hero-frame {
+  position: relative;
+  padding: 1rem;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 20px 70px rgba(62, 1, 0, 0.08);
+  overflow: hidden;
+  width: 80%;
+  min-height: clamp(520px, 58vw, 640px);
+  margin: 0 auto;
+}
+
+/* Label "Allany Rodrigues" sobre a foto */
+.photo-label {
+  position: absolute;
+  top: 1.4rem;
+  left: 1.4rem;
+  z-index: 1;
+  display: inline-flex;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background: rgba(242, 239, 227, 0.88);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+}
+
+/* Imagem no hero (object-fit para cobrir sem distorcer) */
+.hero-image {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  max-height: none;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 1.6rem;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SEÇÕES - Padding padrão para all seções
+   ═══════════════════════════════════════════════════════════ */
+.section {
+  padding: 6rem 0;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   LAYOUT 2 COLUNAS - Usado em várias seções
+   ═══════════════════════════════════════════════════════════ */
+.two-columns {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 3rem;
+  align-items: stretch;
+}
+
+/* Alterna as colunas (foto fica à direita) */
+.alt-columns {
+  grid-template-columns: 1.05fr 0.95fr;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   PHOTO WRAP - Moldura com efeito de profundidade
+   ═══════════════════════════════════════════════════════════ */
+.photo-wrap {
+  position: relative;
+  height: 100%;
+}
+
+/* Outline decorativo atrás da foto */
+.photo-outline {
+  position: absolute;
+  inset: -1rem auto auto -1rem;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(175, 139, 122, 0.35);
+  border-radius: var(--radius-xl);
+}
+
+/* Card que contem a foto */
+.photo-card {
+  position: relative;
+  padding: 1rem;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--line);
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+  height: 100%;
+  overflow: hidden;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  max-height: none;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 1.6rem;
+}
+
+.content-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+/* Stack de parágrafos com espaçamento */
+.text-stack {
+  display: grid;
+  gap: 1rem;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   CHIPS - Tags/badges com tópicos da seção sobre
+   ═══════════════════════════════════════════════════════════ */
+.chips {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.chip {
+  padding: 1rem 1.1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--line);
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+  color: var(--primary-2);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SEÇÃO SOFT - Background alternado (cinza claro)
+   ═══════════════════════════════════════════════════════════ */
+.section-soft {
+  background: var(--bg-soft);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+/* Stack de cards (vertical) */
+.stack-cards {
+  display: grid;
+  gap: 1rem;
+}
+
+.stack-cards .card,
+.faq-card {
+  padding: 1.6rem;
+}
+
+.stack-cards h3,
+.step-card h3,
+.faq-card h3 {
+  margin-bottom: 0.8rem;
+  color: var(--text);
+}
+
+.section-head {
+  display: grid;
+  gap: 1rem;
+  max-width: 54rem;
+}
+
+/* Centraliza o section-head */
+.section-head.center {
+  text-align: center;
+  justify-items: center;
+  margin: 0 auto;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   STEPS GRID - Grid 3 colunas para as etapas do processo
+   ═══════════════════════════════════════════════════════════ */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 2.3rem;
+}
+
+/* Card com números grandes */
+.step-card {
+  padding: 1.8rem;
+  transition: 0.25s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+
+/* Números grandes das etapas */
+.step-number {
+  display: block;
+  font-size: 3.3rem;
+  color: var(--accent-soft);
+  margin-bottom: 1rem;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SEÇÃO DARK - Fundo escuro com texto claro (destaque)
+   ═══════════════════════════════════════════════════════════ */
+.section-dark {
+  background: var(--primary);
+  color: #fff;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dark-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.section-dark h2 {
+  max-width: 17ch;
+}
+
+/* Box com efeito glassmorphism */
+.dark-box {
+  padding: 2rem;
+  border-radius: var(--radius-xl);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(6px);
+}
+
+.dark-box p {
+  color: #f7ece7;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   NARROW CONTAINER - Largura máxima menor para seções específicas
+   ═══════════════════════════════════════════════════════════ */
+.narrow {
+  max-width: 980px;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   FAQ LIST - Grid para perguntas e respostas
+   ═══════════════════════════════════════════════════════════ */
+.faq-list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2.3rem;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SEÇÃO CONTATO - CTA final + informações
+   ═══════════════════════════════════════════════════════════ */
+.section-contact {
+  padding-top: 0;
+}
+
+/* Box ao redor da seção de contato */
+.contact-box {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 2rem;
+  padding: 2rem;
+  border: 1px solid var(--line);
+  border-radius: 2.2rem;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.contact-description {
+  max-width: 40rem;
+  margin-top: 1.4rem;
+}
+
+/* Panel com informações de contato */
+.contact-panel {
+  padding: 1.7rem;
+  border-radius: 1.7rem;
+  background: #f8f5ee;
+  display: grid;
+  gap: 1.2rem;
+}
+
+/* Item individual de contato */
+.contact-item {
+  display: grid;
+  gap: 0.35rem;
+  color: var(--primary-2);
+}
+
+.contact-item span {
+  color: var(--text-soft);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   FOOTER - Rodapé do site
+   ═══════════════════════════════════════════════════════════ */
+.footer {
+  border-top: 1px solid var(--line);
+  background: var(--bg);
+}
+
+.footer-inner {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--text-soft);
+  font-size: 0.95rem;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SECTION INTRO TEXT - Texto introdutório antes de grids
+   ═══════════════════════════════════════════════════════════ */
+.section-intro-text {
+  max-width: 54rem;
+  margin-top: 1rem;
+}
+
+.dark-single {
+  max-width: 880px;
+}
+
+.dark-only-title {
+  margin: 0;
+  max-width: none;
+  color: #fff;
+}
+
+.endereco {
+  display: grid;
+  gap: 0.35rem;
+  color: var(--primary-2);
+}
+
+.endereco span {
+  color: var(--text-soft);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   RESPONSIVO - Ajustes para tablets e desktops
+   ═══════════════════════════════════════════════════════════ */
+@media (max-width: 980px) {
+  /* Esconde elementos desktop-only em tablets */
+  .desktop-only {
+    display: none !important;
+  }
+
+  /* Converte grids 2-colunas em 1 coluna */
+  .hero-grid,
+  .two-columns,
+  .alt-columns,
+  .steps-grid,
+  .dark-grid,
+  .contact-box,
+  .highlight-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-grid {
+    padding: 3rem 0 4rem;
+  }
+
+  /* Reduz altura das imagens */
+  .hero-image,
+  .photo-card img {
+    height: 460px;
+    min-height: 0;
+    max-height: none;
+  }
+
+  /* Chips em 1 coluna */
+  .chips {
+    grid-template-columns: 1fr;
+  }
+
+  /* Seções com mais padding em mobile */
+  .section,
+  .section-contact {
+    padding: 4.5rem 0;
+  }
+
+  .section-contact {
+    padding-top: 0;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   RESPONSIVO - Ajustes para celulares (até 640px)
+   ═══════════════════════════════════════════════════════════ */
+@media (max-width: 640px) {
+  /* Container com menos padding em celular */
+  .container {
+    width: min(var(--container), calc(100% - 1.2rem));
+  }
+
+  .header-inner {
+    min-height: 74px;
+  }
+
+  /* Logo menor em mobile */
+  .brand-logo {
+    height: 46px;
+  }
+
+  /* Títulos menores */
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  /* Textos menores */
+  .hero-description,
+  .text-stack,
+  .card p,
+  .contact-description {
+    font-size: 1rem;
+  }
+
+  /* Fotos ainda menores */
+  .hero-image,
+  .photo-card img {
+    height: 360px;
+  }
+
+  /* Cards com menos padding */
+  .contact-box,
+  .stack-cards .card,
+  .faq-card,
+  .step-card,
+  .dark-box,
+  .text-card {
+    padding: 1.2rem;
+  }
+
+  .hero-image,
+  .photo-card img {
+    min-height: 0;
+    max-height: none;
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"from PIL import Image; img = Image.open\\(''C:/Users/gilso/OneDrive/Área de Trabalho/praticas/ally/site-psicologa-premium/public/sobre.png''\\); print\\(f''Width: {img.width}, Height: {img.height}''\\)\")",
+      "Bash(python -c \"from PIL import Image; img = Image.open\\(''C:/Users/gilso/OneDrive/Área de Trabalho/praticas/ally/site-psicologa-premium/public/psicologa.png''\\); print\\(f''Width: {img.width}, Height: {img.height}''\\)\")",
+      "Bash(npm run:*)"
+    ]
+  }
+}

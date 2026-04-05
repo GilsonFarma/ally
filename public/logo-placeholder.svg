@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 180">
+  <rect width="480" height="180" fill="#f2efe3"/>
+  <path d="M30 90c45-40 85-58 135-58 48 0 89 17 135 58-46 41-87 58-135 58-50 0-90-17-135-58z" fill="none" stroke="#3e0100" stroke-width="6"/>
+  <circle cx="165" cy="90" r="28" fill="none" stroke="#3e0100" stroke-width="6"/>
+  <text x="250" y="85" font-size="30" fill="#3e0100" font-family="Playfair Display, serif">Allany Rodrigues</text>
+  <text x="250" y="118" font-size="18" fill="#7c302a" font-family="Mulish, sans-serif" letter-spacing="3">PSICÓLOGA</text>
+</svg>

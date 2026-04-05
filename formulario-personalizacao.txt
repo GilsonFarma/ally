@@ -1,0 +1,122 @@
+FORMULARIO DE PERSONALIZACAO DO SITE - PSICOLOGA PREMIUM
+
+Use este formulario para preencher as informacoes que serao substituidas no site. Copie e preencha cada secao com seus dados pessoais.
+
+1. INFORMACOES GERAIS
+- Nome da Psicologa: Allany Rodrigues (substitua se necessario)
+- CRP: [Seu CRP]
+- Especializacoes: [Liste suas especializacoes]
+- Modalidades de Atendimento: Online e presencial (ou apenas uma)
+- Publico Atendido: [Descreva brevemente]
+
+2. SECAO HERO (PAGINA INICIAL)
+- Texto do eyebrow: Atendimento psicologico online e presencial
+- Titulo principal (H1): Um espaco de escuta, presenca e cuidado para quem deseja se olhar com mais profundidade.
+- Descricao: Um atendimento acolhedor, etico e humano para favorecer autoconhecimento, elaboracao emocional e construcao de caminhos mais conscientes.
+
+DESTAQUES (3 cards principais):
+1. Titulo: Escuta etica
+   Texto: Acolhimento com presenca, respeito a singularidade e atencao a historia de cada pessoa.
+
+2. Titulo: Ambiente seguro
+   Texto: Um espaco de confianca para falar, refletir e elaborar vivencias com mais clareza.
+
+3. Titulo: Cuidado humanizado
+   Texto: Atendimento construido com sensibilidade, profissionalismo e comunicacao acolhedora.
+
+3. SECAO SOBRE
+- Tag da secao: Sobre
+- Titulo (H2): Uma presenca profissional acolhedora, sensivel e comprometida com a escuta.
+- Texto 1: Esta secao foi pensada para apresentar a psicologa de forma mais refinada e humana, transmitindo confianca desde o primeiro contato. Aqui voce pode falar da sua trajetoria, formacao, proposito profissional e da forma como conduz os atendimentos.
+- Texto 2: O ideal e manter um texto claro, sofisticado e acolhedor, sem exagerar em termos tecnicos. A proposta e fazer com que a pessoa se sinta segura ao conhecer seu trabalho.
+- Texto 3: Voce pode incluir CRP, especializacoes, publico atendido, modalidades de atendimento e uma breve visao sobre o que considera essencial no processo terapeutico.
+
+CHIPS (topicos principais):
+1. Escuta atenta e individualizada
+2. Atendimento com etica e presenca
+3. Comunicacao clara e acolhedora
+4. Espaco de confianca e respeito
+
+4. SECAO ABORDAGEM
+- Tag da secao: Abordagem
+- Titulo (H2): Uma explicacao clara sobre como o processo terapeutico e conduzido.
+- Texto 1: Aqui voce pode apresentar sua abordagem de forma leve, elegante e compreensivel. Em vez de escrever algo muito academico, foque em como essa linha teorica aparece no atendimento e no tipo de experiencia que voce busca proporcionar.
+- Texto 2: Essa secao funciona muito bem quando traduz a teoria para uma linguagem mais humana, tornando o site mais proximo e acolhedor para quem esta chegando.
+
+CARDS DE ABORDAGEM (3 aspectos):
+1. Titulo: Escuta clinica
+   Texto: Explique aqui como voce acolhe a singularidade de cada pessoa no processo terapeutico.
+
+2. Titulo: Conducao dos encontros
+   Texto: Fale brevemente sobre ritmo, construcao do vinculo e a maneira como o processo e desenvolvido.
+
+3. Titulo: Objetivo do acompanhamento
+   Texto: Mostre que o processo favorece reflexao, autoconhecimento e fortalecimento interno.
+
+5. SECAO PROCESSO
+- Tag da secao: Processo
+- Titulo (H2): Um caminho simples, elegante e acolhedor para facilitar o primeiro contato.
+
+ETAPAS (3 passos):
+1. Numero: 01
+   Titulo: Primeiro contato
+   Texto: A pessoa entra em contato para receber orientacoes iniciais e tirar duvidas de forma leve e objetiva.
+
+2. Numero: 02
+   Titulo: Agendamento
+   Texto: Voce pode explicar como funciona a marcacao, disponibilidade e modalidade do atendimento.
+
+3. Numero: 03
+   Titulo: Inicio do acompanhamento
+   Texto: Os primeiros encontros favorecem escuta, vinculo e compreensao do que sera construido no processo.
+
+6. SECAO DARK (DESTAQUE DE VALOR)
+- Tag da secao: Presenca digital acolhedora
+- Titulo (H2): Um site pensado para transmitir confianca, sofisticacao e conexao desde os primeiros segundos.
+- Texto: Essa area substitui secoes genericas e ajuda a reforcar a percepcao de valor da profissional sem falar de preco, trauma ou listas sensiveis. O foco e presenca, cuidado e clareza.
+
+7. SECAO FAQ
+- Tag da secao: FAQ
+- Titulo (H2): Perguntas frequentes
+
+PERGUNTAS FREQUENTES (4 itens):
+1. Pergunta: Como posso agendar um encontro?
+   Resposta: Voce pode direcionar o visitante para o WhatsApp, facilitando o primeiro contato de forma direta.
+
+2. Pergunta: Os atendimentos sao online ou presenciais?
+   Resposta: Personalize conforme a modalidade oferecida pela profissional.
+
+3. Pergunta: Quanto tempo dura cada encontro?
+   Resposta: Voce pode informar aqui a duracao media do encontro, como 50 minutos, se desejar.
+
+4. Pergunta: Como funciona o primeiro encontro?
+   Resposta: Explique que o inicio do processo e um momento de acolhimento, escuta e compreensao da demanda trazida.
+
+8. SECAO CONTATO
+- Tag da secao: Contato
+- Titulo (H2): Vamos criar um espaco de cuidado desde o primeiro contato.
+- Descricao: Personalize esta secao com seus canais oficiais, endereco, modalidades de atendimento e informacoes complementares que desejar apresentar.
+
+INFORMACOES DE CONTATO:
+- WhatsApp: (11) 99999-9999
+- Instagram: @seuinstagram
+- E-mail: seu.email@exemplo.com
+- Atendimento: Online e presencial
+
+9. FOOTER
+- Texto: © 2026 Allany Rodrigues • Psicologa • Todos os direitos reservados
+
+10. LINKS E BOTOES
+- WhatsApp Link: https://wa.me/5511999999999 (substitua pelo seu numero)
+- Instagram Link: [Link do seu Instagram]
+- E-mail Link: [Seu e-mail]
+
+11. IMAGENS
+- Logo: /logo.png (substitua pela sua logo)
+- Foto da Psicologa: /psicologa.png (substitua pela sua foto profissional)
+
+INSTRUCOES PARA SUBSTITUICAO
+1. Abra o arquivo src/App.jsx
+2. Substitua os textos nos arrays e JSX conforme preenchido acima
+3. Para imagens, substitua os arquivos em public/
+4. Teste o site com npm run dev e acesse http://localhost:5173/

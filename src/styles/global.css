@@ -34,7 +34,7 @@ body {
   color: var(--text);
   font-family: 'Mulish', sans-serif;
   /* 🎨 Background com logo grande como watermark em baixa opacidade */
-  background-image: url('/logo.png');
+  background-image: url('/images/branding/logo.png');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -258,6 +258,8 @@ h3 {
 
 p {
   margin: 0;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 /* Descrições e textos maiores */

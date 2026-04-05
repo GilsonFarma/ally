@@ -7,6 +7,7 @@ import FaqSection from './components/sections/FaqSection'
 import HeroSection from './components/sections/HeroSection'
 import ManifestoSection from './components/sections/ManifestoSection'
 import ProcessSection from './components/sections/ProcessSection'
+import AvaliacoesSection from './components/sections/AvaliacoesSection'
 import {
   abordagemCards,
   contact,
@@ -34,6 +35,7 @@ export default function App() {
         <ProcessSection etapas={etapas} />
         <ManifestoSection />
         <FaqSection faqs={faqs} />
+        <AvaliacoesSection />
         <ContactSection contact={contact} />
       </main>
 

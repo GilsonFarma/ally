@@ -18,6 +18,7 @@ import {
   sobreTopicos,
   etapas,
 } from './content/siteContent'
+import { Analytics } from "@vercel/analytics/next"
 
 export default function App() {
   return (
@@ -40,6 +41,7 @@ export default function App() {
       </main>
 
       <Footer />
+      <Analytics />
     </div>
   )
 }

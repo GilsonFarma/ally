@@ -41,6 +41,17 @@ body {
   background-size: 50% auto;
   background-color: var(--bg);
 }
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background: rgba(242, 239, 227, 0.7); 
+  /* 👆 controla o quanto "apaga" a imagem */
+
+  z-index: -1;
+  pointer-events: none;
+}
 
 img {
   display: block;
